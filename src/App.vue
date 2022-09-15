@@ -1,6 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Default from './layout/default.vue';</script>
 <template>
   <main>
-    <router-view></router-view>
+    <default>
+      <router-view></router-view>
+    </default>
   </main>
 </template>

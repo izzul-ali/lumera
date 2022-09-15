@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import Navbar from './Navbar.vue';
 import { onClickOutside } from '@vueuse/core'
 
 const openSidebar = ref(false)
-
-watch(openSidebar, (bar) => console.log(bar))
 
 const closeNavbar = () => {
     openSidebar.value = false
@@ -17,7 +15,7 @@ onClickOutside(target, closeNavbar)
 </script>
 <template>
     <header ref="target" :class="openSidebar ? 'shadow-none': ''"
-        class="md:flex md:justify-between fixed top-0 left-0 right-0 shadow shadow-gray-300 bg-[#ffeee6] dark:bg-gray-800 dark:shadow-none dark:text-white flex justify-between items-center p-4">
+        class="sm:flex sm:justify-between fixed top-0 left-0 right-0 shadow shadow-gray-300 bg-[#ffeee6] dark:bg-gray-800 dark:shadow-none dark:text-white flex justify-between items-center p-4">
         <div class="flex items-center gap-x-1">
             <svg class="dark:text-teal-600 text-teal-500" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="currentColor"
@@ -26,7 +24,7 @@ onClickOutside(target, closeNavbar)
             <h1 class="text-xl font-title">Lumera</h1>
         </div>
 
-        <button @click="openSidebar = !openSidebar" class="focus:outline-none md:hidden">
+        <button @click="openSidebar = !openSidebar" class="focus:outline-none sm:hidden">
             <svg width="24" height="24" viewBox="0 0 24 24">
                 <path fill="currentColor"
                     d="M10 18q-.425 0-.712-.288Q9 17.425 9 17t.288-.712Q9.575 16 10 16h10q.425 0 .712.288q.288.287.288.712t-.288.712Q20.425 18 20 18ZM4 8q-.425 0-.712-.287Q3 7.425 3 7t.288-.713Q3.575 6 4 6h16q.425 0 .712.287Q21 6.575 21 7t-.288.713Q20.425 8 20 8Zm6 5q-.425 0-.712-.288Q9 12.425 9 12t.288-.713Q9.575 11 10 11h10q.425 0 .712.287q.288.288.288.713t-.288.712Q20.425 13 20 13Z" />
