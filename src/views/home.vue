@@ -2,6 +2,8 @@
 import { useHead } from "@vueuse/head";
 import Button from '../components/Button.vue';
 import ToTopBtn from '../components/ToTopBtn.vue';
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 
 
 useHead({
@@ -16,10 +18,12 @@ useHead({
 </script>
 
 <template>
+    <Header />
     <section class="mb-10 mt-20 p-5">
         <h1 class="text-3xl font-semibold font-body tracking-wide leading-tight">Reformed Life and Pensions Policy
             Administration</h1>
-        <p class="my-3 mb-5 text-xs font-body font-thin tracking-wide text-gray-800 dark:text-gray-400">We provide safe,
+        <p class="my-3 mb-5 text-xs font-body font-thin tracking-wide text-gray-800 dark:text-gray-400">We provide
+            safe,
             continuous digital
             transformation for
             Europe's Life and Pensions industry.</p>
@@ -103,5 +107,6 @@ useHead({
         <Button desc="let's get connected" />
     </section>
 
-    <ToTopBtn/>
+    <ToTopBtn />
+    <Footer />
 </template>

@@ -10,31 +10,31 @@ const darkMode = useDark()
 <template>
     <transition name="navbar">
         <nav :class="openSidebar ? 'block' : 'hidden'"
-            class="sm:block sm:relative sm:top-0 sm:py-0 sm:shadow-none bg-[#ffeee6] dark:bg-gray-800 dark:text-gray-300 dark:shadow-none shadow shadow-gray-300 left-0 right-0 py-5 absolute top-12 font-body text-sm">
-            <ul class="w-2/4 mx-auto sm:flex sm:space-x-5 sm:w-full sm:items-center">
+            class="md:block md:relative md:top-0 md:py-0 md:shadow-none bg-[#ffeee6] dark:bg-gray-800 dark:text-gray-300 dark:shadow-none shadow shadow-gray-300 left-0 right-0 py-5 absolute top-12 font-body text-md">
+            <ul class="w-2/4 mx-auto md:flex md:space-x-5 md:w-full md:items-center">
                 <router-link to="/">
                     <li @click="$emit('closeNavbar')"
-                        class="hover:text-teal-500 py-3 mb-3 sm:py-0 sm:mb-0 dark:border-b border-gray-700">
+                        class="hover:text-teal-500 py-3 mb-3 md:py-0 md:mb-0 dark:border-b border-gray-700">
                         Home</li>
                 </router-link>
                 <router-link to="/about">
                     <li @click="$emit('closeNavbar')"
-                        class="hover:text-teal-500 py-3 mb-3 sm:py-0 sm:mb-0 dark:border-b border-gray-700">
+                        class="hover:text-teal-500 py-3 mb-3 md:py-0 md:mb-0 dark:border-b border-gray-700">
                         About</li>
                 </router-link>
                 <router-link to="">
                     <li @click="$emit('closeNavbar')"
-                        class="hover:text-teal-500 py-3 mb-3 sm:py-0 sm:mb-0 dark:border-b border-gray-700">
+                        class="hover:text-teal-500 py-3 mb-3 md:py-0 md:mb-0 dark:border-b border-gray-700">
                         Contact</li>
                 </router-link>
                 <router-link to="">
                     <li @click="$emit('closeNavbar')"
-                        class="hover:text-teal-500 py-3 mb-3 sm:py-0 sm:mb-0 dark:border-b border-gray-600">
+                        class="hover:text-teal-500 py-3 mb-3 md:py-0 md:mb-0 dark:border-b border-gray-600">
                         Carrers</li>
                 </router-link>
                 <li
-                    class="mt-5 px-3 py-2 sm:mt-0 dark:bg-gray-700 sm:dark:bg-inherit rounded-xl group flex text-xs items-center justify-between">
-                    <p class="text-gray-700 sm:hidden dark:text-gray-300 group-hover:text-teal-500">Appearance</p>
+                    class="mt-5 px-3 py-2 md:mt-0 dark:bg-gray-700 md:dark:bg-inherit rounded-xl group flex text-xs items-center justify-between">
+                    <p class="text-gray-700 md:hidden dark:text-gray-300 group-hover:text-teal-500">Appearance</p>
                     <button @click="darkMode = !darkMode" class="focus:outline-none">
                         <svg v-if="!darkMode" width="18" height="18" viewBox="0 0 24 24">
                             <path fill="currentColor"

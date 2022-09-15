@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { useHead } from "@vueuse/head";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 
 useHead({
     title: 'Lumera | About',
@@ -13,6 +15,7 @@ useHead({
 </script>
 
 <template>
+    <Header/>
     <section class="my-20 p-5 font-body text-center">
         <div class="space-y-3">
             <h2 class="text-sm text-teal-600">About Us</h2>
@@ -37,7 +40,7 @@ useHead({
             <p class="text-sm">Mon-Fri from 8am to 5am</p>
             <p class="text-sm text-teal-700">+1(775) 93735-39245</p>
         </div>
-
-        
     </section>
+
+    <Footer/>
 </template>
