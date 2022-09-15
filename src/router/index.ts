@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const Home = () => import('../views/home.vue')
 const About = () => import('../views/about.vue')
+const NotFound = () => import('../views/404.vue')
 
 const router = createRouter({
     history: createWebHistory(),
@@ -15,6 +16,11 @@ const router = createRouter({
             path: '/about',
             name: 'about',
             component: About
+        },
+        {
+            path: '/:pathmatch(.*)*',
+            name: 'notFound',
+            component: NotFound
         }
     ]
 }) 
