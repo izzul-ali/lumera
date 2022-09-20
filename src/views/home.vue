@@ -5,7 +5,7 @@ import ToTopBtn from '../components/ToTopBtn.vue';
 
 
 useHead({
-    title: 'Lumera',
+    title: 'Lumera | Home',
     meta: [
         {
             name: 'description',
