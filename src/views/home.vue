@@ -3,7 +3,6 @@ import { useHead } from "@vueuse/head";
 import Button from '../components/Button.vue';
 import ToTopBtn from '../components/ToTopBtn.vue';
 
-
 useHead({
     title: 'Lumera | Home',
     meta: [
