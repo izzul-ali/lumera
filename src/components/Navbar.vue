@@ -9,22 +9,22 @@ const darkMode = useDark()
 </script>
 <template>
     <nav :class="openNavbar ? 'block' : 'hidden'"
-        class="sm:block sm:relative sm:top-0 sm:py-0 sm:shadow-none bg-[#ffeee6] dark:bg-gray-800 dark:text-gray-300 dark:shadow-none shadow shadow-gray-300 left-0 right-0 py-5 absolute top-12 font-body text-sm">
+        class="sm:block sm:relative sm:top-0 sm:py-0 sm:drop-shadow-none bg-[#ffeee6] dark:bg-gray-800 dark:text-gray-300 dark:drop-shadow-none drop-shadow left-0 right-0 py-5 absolute top-12 font-body text-sm">
         <ul class="w-2/4 mx-auto sm:flex sm:space-x-5 sm:w-full sm:items-center">
             <router-link to="/">
                 <li @click="$emit('closeNavbar')"
                     class="hover:text-teal-500 py-3 mb-3 sm:py-0 sm:mb-0 dark:border-b border-gray-700">
                     Home</li>
             </router-link>
-            <router-link to="/about">
-                <li @click="$emit('closeNavbar')"
-                    class="hover:text-teal-500 py-3 mb-3 sm:py-0 sm:mb-0 dark:border-b border-gray-700">
-                    About</li>
-            </router-link>
-            <router-link to="">
+            <router-link to="/contact">
                 <li @click="$emit('closeNavbar')"
                     class="hover:text-teal-500 py-3 mb-3 sm:py-0 sm:mb-0 dark:border-b border-gray-700">
                     Contact</li>
+            </router-link>
+            <router-link to="/">
+                <li @click="$emit('closeNavbar')"
+                    class="hover:text-teal-500 py-3 mb-3 sm:py-0 sm:mb-0 dark:border-b border-gray-700">
+                    About</li>
             </router-link>
             <router-link to="">
                 <li @click="$emit('closeNavbar')"
