@@ -8,7 +8,7 @@ useHead({
     meta: [
         {
             name: 'description',
-            content: 'Lumera official website'
+            content: 'Lumera website clone'
         }
     ]
 })
